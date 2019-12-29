@@ -3,7 +3,7 @@
 
 
 * 一开始忘记回溯了，直接跑不了
-
+* [我的解法和这个差不多](https://blog.csdn.net/qq_42995099/article/details/82193192)
 ```
 #include <bits/stdc++.h>
 
