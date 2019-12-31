@@ -1,6 +1,6 @@
 
 
-* 
+* 简单hash，一开始忘记了```map```提取键值的用法
 
 ```
 #include <bits/stdc++.h>
@@ -38,10 +38,21 @@ int main(){
         mp[resline]+=1;
 
     }
+    bool flag=false;
     for(map<string,int>::iterator it=mp.begin();it!=mp.end();it++){
-        if(it->second>=2)
-            cout<<it->first<<" "<<it->second<<endl;
+        if(it->second>=2){
+            string tmp=it->first;
+            for(int i=0;i<(int)tmp.size();i++){
+                cout<<tmp[i];
+                if(i==2)
+                    cout<<'-';
+            }
+            cout<<" "<<it->second<<endl;
+            flag=true;
+        }
     }
+    if(flag==false)
+        cout<<"No duplicates."<<endl;
     return 0;
 }
 ```
