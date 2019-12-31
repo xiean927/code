@@ -7,7 +7,7 @@
 * C:马走日
   * 深搜入门（不涉及剪枝等）
 * D:Jumping Cows
-  * 为读懂题
+  * 未读懂题
 * E:The Suspects
   * 简单并查集
   
