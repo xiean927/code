@@ -1,5 +1,7 @@
 ### 最小生成树
 
+#### [正解](https://blog.csdn.net/armstrong_rose/article/details/80317107)
+
 ```
 #include <bits/stdc++.h>
 
