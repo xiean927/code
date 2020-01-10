@@ -5,6 +5,7 @@
 ### 思路
 * 从最小生成树中之外选择一条边，构建次小生成树
 * ```vis数组```
+* [次小生成树证明（没看懂）](https://zhuanlan.zhihu.com/p/24950356?utm_source=com.tencent.tim&utm_medium=social)
 
 ```
 #include <bits/stdc++.h>
