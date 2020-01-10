@@ -54,7 +54,7 @@ int main(){
 
 ```
 
-### [warshall算法暴力自乘求闭包 WA](https://blog.csdn.net/weixin_44646116/article/details/90544796)
+### [warshall算法暴力自乘求闭包 OLE](https://blog.csdn.net/weixin_44646116/article/details/90544796)
 
 ```
 #include <bits/stdc++.h>
