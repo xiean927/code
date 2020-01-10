@@ -112,6 +112,60 @@ strcpy(c,s.c_str());
 * 5、还有可能是程序抛出了未接收的异常
 
 
+### 5,fixed 和setprecision()的用法
+
+* 使用setprecision(n)可控制输出流显示浮点数的数字个数。C++默认的流输出数值有效位是6。
+* 如果setprecision(n)与setiosflags(ios::fixed)合用，可以控制小数点右边的数字个数。setiosflags(ios::fixed)是用定点方式表示实数。
+* 如果与setiosnags(ios::scientific)合用， 可以控制指数表示法的小数位数。setiosflags(ios::scientific)是用指数方式表示实数。
+
+```
+#include <iostream>
+#include <iomanip> //要用到格式控制符
+
+using namespace std;
+
+int main(){
+    double amount = 22.0/7;
+    cout <<amount <<endl;
+    cout <<setprecision(0) <<amount <<endl
+    <<setprecision(1) <<amount <<endl
+    <<setprecision(2) <<amount <<endl
+    <<setprecision(3) <<amount <<endl
+    <<setprecision(4) <<amount <<endl;
+
+    cout <<setiosflags(ios::fixed);
+    cout <<setprecision(8) <<amount <<endl;
+
+    cout <<setiosflags(ios::scientific)
+    <<amount <<endl;
+    cout <<setprecision(6); //重新设置成原默认设置
+
+    return 0;
+}
+
+Out:
+3.14286
+3
+3
+3.1
+3.14
+3.143
+3.14285714
+0xc.9249249249248p-2
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
