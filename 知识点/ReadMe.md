@@ -156,7 +156,8 @@ Out:
 
 ```
 
-
+### 6，关于输入
+* [getchar()与cin.get()](http://c.biancheng.net/view/1346.html)
 
 
 
