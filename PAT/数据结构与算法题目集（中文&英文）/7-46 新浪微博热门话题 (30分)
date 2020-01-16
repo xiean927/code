@@ -1,0 +1,141 @@
+
+
+### 思路：
+* 我没读懂输入输出样例
+```
+4
+This is a #test of topic#.
+Another #Test of topic.#
+This is a #Hot# #Hot# topic
+Another #hot!# #Hot# topic
+
+我的输出:
+hot:4
+test of topic:2
+
+输出样例：
+Hot
+2
+And 1 more ...
+
+
+```
+
+* 我的```WA```代码
+```
+
+
+
+```
+
+
+
+* ```AC```代码，也未读懂
+
+```
+#include<bits/stdc++.h>
+#include<cmath>
+
+#define mem(a,b) memset(a,b,sizeof a);
+#define INF 0x3f3f3f3f
+
+using namespace std;
+
+typedef long long ll;
+typedef pair<string,int> psi;
+
+set<string> st; // 解决每一行重复给 ump 添加的问题
+unordered_map<string,int> ump;
+
+int cmp(psi p1,psi p2)
+{
+    if(p1.second==p2.second) return p1.first<p2.first;
+    return p1.second>p2.second;
+}
+
+int main()
+{
+    string s;
+    char ts[150];
+    int n;
+    while(~scanf("%d",&n))
+    {
+        getchar();
+        ump.clear();
+
+        for(int i=0;i<n;i++)///读取n行
+        {
+            st.clear();
+            getline(cin,s);
+
+            char c;
+            int len=s.length(),jl=0,k=0,blank=1;
+            while(jl<len && s[jl]!='#') jl++;///第一个#
+
+            for(int j=jl+1;j<len;j++)
+            {
+                c=s[j];
+                if(c=='#')
+                {
+                    /// 首位空格处理
+                    int l=0,r=k-1;
+                    while(ts[l]==' ') l++;
+                    while(ts[r]==' ') r--;
+
+                    strncpy(ts,ts+l,r-l+1);///
+                    ts[r-l+1]=0;///结尾置'\0'
+
+                    k=0; /// 开始新的#...#话题计数
+                    if(st.insert(ts).second)///没读懂!!!
+                        ump[ts]++;
+
+                    jl=j+1;
+                    while(jl<len && s[jl]!='#') jl++;
+                    j=jl; /// 不用加 1，因为马上就 j++
+                }
+
+                /// 大写转小写、除英文/数字以外其他字符转空格、多个空格合并一个空格处理
+                if(isupper(c)) ts[k++]=tolower(c), blank=0;///1，如果是大写字母，
+                else if(islower(c)||isdigit(c)) ts[k++]=c, blank=0;///2，如果是小写字母，或者是数字，直接添加
+                else///3，多个空格合并成一个空格处理
+                {
+                    if(blank==0)
+                        ts[k++]=' ',blank=1;
+                }
+            }
+
+//            for(unordered_map<string,int>::iterator it=ump.begin();it!=ump.end();it++)
+//            {
+//                printf("%s == %d\n",it->first.c_str(),it->second);
+//            }
+//            puts("--------------------");
+        }
+
+        vector<psi> vec(ump.begin(),ump.end());
+        sort(vec.begin(),vec.end(),cmp);
+
+        vec[0].first[0]=toupper(vec[0].first[0]);
+        printf("%s\n",vec[0].first.c_str());
+
+        int jde=vec[0].second,cnt=0;
+        printf("%d\n",jde);
+
+        for(int i=1;i<vec.size();i++)
+            if(vec[i].second==jde) cnt++;
+            else break;
+        if(cnt>0) printf("And %d more ...\n",cnt);
+    }
+
+    return 0;
+}
+
+/*
+5
+asdsafsfdsfsdfs dgdfg
+Test #Ab#
+Test #b#
+#more than## a...1+@@b#
+# a+1@     @b#
+*/
+
+```
