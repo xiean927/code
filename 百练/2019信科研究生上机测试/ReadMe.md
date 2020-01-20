@@ -1,4 +1,4 @@
-* [2019信科研究生上机测试 ](http://bailian.openjudge.cn/ss2019/)
+### [2019信科研究生上机测试 ](http://bailian.openjudge.cn/ss2019/)
 
 * A:护林员盖房子   
   * 最大矩形和问题（DP问题）
@@ -7,7 +7,7 @@
 * C:马走日
   * 深搜入门（不涉及剪枝等）
 * D:Jumping Cows
-  * 未读懂题
+  * 贪心 Or dp
 * E:The Suspects
   * 简单并查集
   
