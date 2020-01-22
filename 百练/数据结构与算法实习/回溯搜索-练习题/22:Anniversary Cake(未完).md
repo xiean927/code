@@ -90,3 +90,5 @@ int main()
     return 0;
 }
 ```
+
+### [题解2](https://blog.csdn.net/yangguangqizhi/article/details/85064991)
