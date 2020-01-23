@@ -1,3 +1,6 @@
+## [关于lower_bound( )和upper_bound( )的常见用法](https://blog.csdn.net/qq_40160605/article/details/80150252)
+## 得拿手推导一下，不然真的不懂
+
 ## 01:查找最接近的元素
 
 * ```TLE```代码
@@ -131,6 +134,9 @@ int main()
 ```
 
 ## 03:矩形分割
+* [二分查找+降维处理](https://blog.csdn.net/liusu201601/article/details/88416993)
+* [题解2](https://blog.csdn.net/SSYITwin/article/details/81543534)
+* [题解3](https://blog.csdn.net/zhhe0101/article/details/52794852)
 
 * 2分代码
 ```
