@@ -138,7 +138,7 @@ int main()
 * [题解2](https://blog.csdn.net/SSYITwin/article/details/81543534)
 * [题解3](https://blog.csdn.net/zhhe0101/article/details/52794852)
 
-* 2分代码
+* 8分代码
 ```
 #include <bits/stdc++.h>
 
@@ -151,6 +151,8 @@ struct Rec{
     ll L,T;///小矩形的左上角坐标是(L,T)
     ll W,H;///宽度是W，高度是H
 }rec[10010];
+int a[1000005];
+
 
 ll area[2];///0：左边的面积；1：右边的面积
 ll make_area(int n){///以x=n作为分隔线，计算左右两端的面积
@@ -170,7 +172,7 @@ ll make_area(int n){///以x=n作为分隔线，计算左右两端的面积
             area[1]+=rec[i].H*rec[i].W;
         }
         else if(rec[i].L<n&&rec[i].L+rec[i].W>n){///如果矩形有一部分在右侧
-            area[1]+=rec[i].H*(n+rec[i].W-rec[i].L);
+            area[1]+=rec[i].H*(rec[i].W+rec[i].L-n);
         }
     }
 
@@ -179,30 +181,44 @@ ll make_area(int n){///以x=n作为分隔线，计算左右两端的面积
 
 int main(){
     scanf("%lld%lld",&R,&N);
-    for(int i=0;i<N;i++)    scanf("%lld%lld%lld%lld",&rec[i].L,&rec[i].T,&rec[i].W,&rec[i].H);
-    ll st=0,ed=R,mid,ok=0;
+    memset(a,0,sizeof(a));
+    for(int i=0;i<N;i++){
+        scanf("%lld%lld%lld%lld",&rec[i].L,&rec[i].T,&rec[i].W,&rec[i].H);
+        for(int j=rec[i].L;j<rec[i].L+rec[i].W;j++){
+			a[j]+=rec[i].H;
+		}
+    }
+    ll st=0,ed=R,mid;
 
-    while(st<ed){
+    if(N==1&&rec[0].W==1){
+        cout<<R<<endl;
+        return 0;
+    }
+
+    while(st+3<ed){
         mid=(ed-st)/2+st;
 
-        if(make_area(mid)<0)
-            st=mid+1;
-        else if(make_area(mid)>0)
+        if(make_area(mid)<=0)
+            st=mid;
+        else
             ed=mid;
-        else{
-            ok=mid;
-            break;
-        }
+        //else{
+          //  ok=mid;
+         //   break;
+        //}
 
     }
-    if(ok){
-        while(make_area(mid)==0&&mid<=R)    mid++;
-        cout<<mid<<endl;
-    }
-    else{
-        while(st<=ed&&make_area(st)==0) st++;
-        cout<<st<<endl;
-    }
+    int ans;
+    ll su=999999999999;//因为 这个longlong，搞了2个小时！！！
+	for(int i=ed;i>=st;i--)//对终值进行简单的判断
+	{
+		ll s=make_area(i);
+		if(s>=0&&s<su) {su=s; ans=i;}
+	}
+    //细节2：需要切线尽可能靠右
+	while(ans<R&&a[ans]==0) ans++;
+
+	printf("%d",ans);
     return 0;
 }
 ```
