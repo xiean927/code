@@ -155,6 +155,63 @@ void twoPointers(int n,int m){
 
 ### 1055 The World's Richest (25分)
 * ```if(book[per[i].age]<100){///每个年龄的人数要小于100 ```
+### 1062 Talent and Virtue (25分)
+* 1，按照等级排序，
+  * 2，按照总分排序
+    * 3，按照德育分排序
+      * 4，按照编号字母序排序
+```
+struct info{ 
+    char num[10];
+    int de_s,cai_s,sum;
+    int clas;//类别 
+}stu[100010]; 
+bool cmp(info a,info b){
+    if(a.clas != b.clas) return a.clas < b.clas;
+    else if(a.sum != b.sum) return a.sum > b.sum;
+    else if(a.de_s != b.de_s) return a.de_s > b.de_s;
+    else return strcmp(a.num,b.num) < 0;
+}
+```
+### 1063 Set Similarity (25分)
+* 寻找两个```set<int>```中的变量的相似个数
+
+```
+const int N=52;
+set<int> st[N];
+void compare(int x,int y){
+    int totalNum=st[x].size(),sameNum=0;
+    for(set<int>::iterator it=st[y].begin();it!=st[y].end();it++){
+        if(st[x].find(*it)!=st[x].end())
+            sameNum++;
+        else
+            totalNum++;
+    }
+    printf("%.1lf%\n",sameNum*100.0/totalNum);
+}
+```
+### 1064 Complete Binary Search Tree (30分)
+* 题意：输出完全二叉树的层序遍历
+* 对于完全二叉树而言，设其编号为x，其中根节点编号为1，其左孩子结点的编号一定是2x,右孩子的编号一定是2x+1,
+* 完全二叉树到达空节点的标志是```当前结点root```的编号大于```节点个数n```
+
+### 1065 A+B and C (64bit) (20分)
+* 
+
+```
+long long res = a + b;
+bool flag;
+if (a > 0 && b > 0 && res < 0)///正+正=负，得溢出
+	flag = true;
+else if (a < 0 && b < 0 && res >= 0)///负+负=正，得溢出
+	flag = false;
+else if (res > c)
+	flag = true;
+else
+	flag = false;
+```
+### 1066 Root of AVL Tree (25分)
+* ```AVL树```
 
 ### 1067 Sort with Swap(0, i) (25分)
 * 贪心
