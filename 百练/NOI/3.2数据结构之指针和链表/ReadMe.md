@@ -1,3 +1,5 @@
+## [3.2数据结构之指针和链表](http://noi.openjudge.cn/ch0302/)
+
 ### 1748:约瑟夫问题
 
 * [CSDN解法](https://blog.csdn.net/wuzhenzi5193/article/details/80335201)
