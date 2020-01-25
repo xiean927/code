@@ -325,6 +325,11 @@ int main() {
 }
 
 ```
+### 1074 Reversing Linked List (25分)
+* 需要手动模拟一下
+
+### 1076 Forwards on Weibo (30分)
+* ```BFS```计算6层以内的人数
 
 
 
@@ -347,6 +352,9 @@ int main() {
 
 * [柳诺题解](https://blog.csdn.net/liuchuo/article/details/52226005)，我并没有找出和我的代码的区别
 
+### 1078 Hashing (25分)
+
+
 ### 1085 Perfect Sequence (25分)
 * 二分查找
 ```
@@ -361,6 +369,7 @@ int binarySearch(int i,ll x){
         }else{///如果a[mid]>x,说明第一个大于x的数在mid之前(含mid)
             r=mid;
         }
+	
     }
     return l;///由于while结束时l==r,因此返回l或r皆可
 }
