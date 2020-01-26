@@ -354,6 +354,30 @@ int main() {
 
 ### 1078 Hashing (25分)
 
+### 1080 Graduate Admission (30分)
+* ```测试点1,2```未过，后```AC```
+* ```int id=stu[i].id;```，排序后```id```会打乱
+```
+sort(stu,stu+N,cmp);///
+
+for(int i=0;i<N;i++){
+for(int k=0;k<K;k++){
+    int choice=stu[i].perfer[k];    ///学生选择的报考学校
+    int num=sch[choice].factnum;    ///该学校实际招生数（应该大于0才可以继续招生）
+    int last=sch[choice].lastAdmit;     ///该学校最后录取的学生编号
+    int id=stu[i].id;
+    if(num>0||(last!=-1&&stu[id].FG==stu[last].FG&&stu[id].GE==stu[last].GE)){///如果该学校没招满  ||  该生与前一个录取的学生的排名相同（总分相同&&入学成绩相同） ，则录取
+	ressch[choice].push_back(id);        ///
+	sch[choice].lastAdmit=id;
+	sch[choice].factnum--;
+	break;              ///只能被一个大学录取
+    }
+}
+}
+```
+### 1082 Read Number in Chinese (25分)
+* 思路：阿拉伯数字 转 汉字数字
+
 
 ### 1085 Perfect Sequence (25分)
 * 二分查找
@@ -395,6 +419,15 @@ for(int i=0;i<n;i++){
 }
 ```
 
+### 1086 Tree Traversals Again (25分)
+* ```进栈```相当于```树的前序遍历```
+* ```出栈```相当于```数的中序遍历```
+
+### 1087 All Roads Lead to Rome (30分)
+
+### 1088 Rational Arithmetic (20分)
+* ```分数 加减乘除以及显示```
+
 ### 1089 Insert or Merge (25分)
 ```
 //插入排序
@@ -434,6 +467,23 @@ void mesort(int a[],int b[]){
             break;
     }
 }
+```
+
+### 1090 Highest Price in Supply Chain (25分)
+* ```DFS```
+
+### 1094 The Largest Generation (25分)
+* ```DFS```
+  * ```int hashtable[maxn] = { 1 }; ```记录每代结点个数
+
+### 1097 Deduplication on a Linked List (25分)
+* 根据赋值顺序来判断结点有效性
+```
+struct Node{
+  int address,next,data;
+  int order;///根据结点是否重复，设置结点的位置,0~maxn：不重复结点的位置，maxn~：重复结点的位置
+}node[maxn];
+
 ```
 
 ## 凉凉题目（看了题解也是毫无思路，反复看题解还是毫无思路）：
