@@ -486,6 +486,20 @@ struct Node{
 
 ```
 
+### 1099 Build A Binary Search Tree (30分)
+* 二叉搜索树是数组排序后的中序遍历，其层序遍历，可以是层数与序号依次排大小所得
+```
+void dfs(int root,int index,int label){
+    if(nd[root].lf==-1&&nd[root].rt==-1)///构造叶子节点
+        nd[root]={in[cnt++],nd[root].lf,nd[root].rt,index,label};
+    else{
+        if(nd[root].lf!=-1)    dfs(nd[root].lf,index*2+1,label+1);
+        nd[root]={in[cnt++],nd[root].lf,nd[root].rt,index,label};///构造中序遍历的中间节点
+        if(nd[root].rt!=-1)    dfs(nd[root].rt,index*2+2,label+1);
+    }
+}
+```
+
 ## 凉凉题目（看了题解也是毫无思路，反复看题解还是毫无思路）：
 ### 1049 Counting Ones (30分)
 * 
