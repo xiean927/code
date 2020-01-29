@@ -7,7 +7,7 @@
 
 ### 思路：
 ![](https://github.com/xiean927/code/blob/master/Image/F%20Battle%20City.png)
-* 这个题得拿优先队列写，用普通队列会```WA```
+* 这个题得拿优先队列写，用普通队列会```WA```，[解释了为什么不能用 队列，而得用优先队列](https://blog.csdn.net/smoggyxhdz/article/details/75670028)
 * 要实时更新结点```ed```的```step```，否则，输出的话，只会输出```-1```
 ```
 if(nd.x==ed.x&&nd.y==ed.y){
