@@ -6,6 +6,7 @@
 
 
 ### 思路：
+![](https://github.com/xiean927/code/blob/master/Image/F%20Battle%20City.png)
 * 这个题得拿优先队列写，用普通队列会```WA```
 * 要实时更新结点```ed```的```step```，否则，输出的话，只会输出```-1```
 ```
