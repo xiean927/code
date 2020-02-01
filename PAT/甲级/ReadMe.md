@@ -500,6 +500,59 @@ void dfs(int root,int index,int label){
 }
 ```
 
+### 1102 Invert a Binary Tree (25分)
+* 题意：翻转一棵二叉树,输出：line1：层次遍历，line2：中序遍历
+* 思路：后序遍历遍历交换左右子树
+```
+void postOrder(int root){
+    if(root==-1)///一开始想不通为什么root是-1,
+        return ;
+    postOrder(nd[root].lchild);
+    postOrder(nd[root].rchild);
+    swap(nd[root].lchild,nd[root].rchild);
+}
+```
+
+### 1105 Spiral Matrix (25分)
+* 
+```
+
+```
+
+### 1107 Social Clusters (30分)
+* 题意：一个社交群是一个拥有共同爱好的一群人，你能找到所有社交群吗？
+  * 输出每个社交群的总人数
+* 问题：主要确定每个社交群的根问题
+```
+for (int i = 1; i <= n; i++) {
+	scanf("%d:", &k);
+	for (int j = 0; j < k; j++) {
+		scanf("%d", &t);
+		if (course[t] == 0)///把该爱好赋给i号人，也就是每一个爱好现在哪个人中出现，
+    ///就把这个爱好赋给这个人（以这个人为根），让后面有这个爱好的人，都以此为根
+			course[t] = i;
+		Union(i, findFather(course[t]));
+	}
+}
+```
+### 1108 Finding Average (20分)
+* 字符串数组转小数，小数转字符串数组
+```
+char a[50],b[50];
+double temp;
+sscanf(a, "%lf", &temp);///字符串数组转小数
+sprintf(b, "%.2f",temp);///小数转字符串数组
+```
+
+### 1109 Group Photo (25分)
+
+
+### 1110 Complete Binary Tree (25分)
+
+* ```测试点2,3,4```是序号问题，在读取时，序号可能是多位的，处理成数字，也要用```atoi```才行
+* 完全二叉树的层序遍历为什么左子树是```2*index```，而不是```2*index+1```?
+  * 这取决于起始根节点的序号，```左孩子结点：根节点为0 对应 2*index+1,根节点为1 对应 2*index+1``` 
+
 ## 凉凉题目（看了题解也是毫无思路，反复看题解还是毫无思路）：
 ### 1049 Counting Ones (30分)
 * 
