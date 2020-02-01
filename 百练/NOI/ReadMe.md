@@ -1,1 +1,1 @@
-### [NOI网址](http://noi.openjudge.cn/)
+### [百练NOI](http://noi.openjudge.cn/)
