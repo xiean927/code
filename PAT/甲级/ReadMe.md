@@ -514,8 +514,33 @@ void postOrder(int root){
 ```
 
 ### 1105 Spiral Matrix (25分)
-* 
+* 如何取```N=m*n,m>n，且min(m-n)```
 ```
+n=sqrt(N);///开方后得到的数，总是小的那个
+while(N%n!=0)//m>n
+    n--;
+m=N/n;
+```
+* 如何走方向，一个方向走到底，提前判断该方向是否可以走
+```
+do{
+        screw[i][j]=num[k++];
+        vis[i][j]=true;
+
+        nx=i+dx[di];///判断下一个位置是否出界，如果出界，就先改变方向
+        ny=j+dy[di];
+        if(nx<0||ny<0||nx>=m||ny>=n||vis[nx][ny])
+    //if(nx<0||ny<0||nx>m||ny>n||vis[nx][ny])
+            di=(di+1)%4;
+
+        i=i+dx[di];///下一个位置，（已经判断过不会出界）
+        j=j+dy[di];
+        ///一直往右
+        ///      下
+        ///      左
+        ///      上
+        ///        走
+    }while(k<N);
 
 ```
 
@@ -545,6 +570,7 @@ sprintf(b, "%.2f",temp);///小数转字符串数组
 ```
 
 ### 1109 Group Photo (25分)
+* 模拟排队照照片
 
 
 ### 1110 Complete Binary Tree (25分)
@@ -552,6 +578,13 @@ sprintf(b, "%.2f",temp);///小数转字符串数组
 * ```测试点2,3,4```是序号问题，在读取时，序号可能是多位的，处理成数字，也要用```atoi```才行
 * 完全二叉树的层序遍历为什么左子树是```2*index```，而不是```2*index+1```?
   * 这取决于起始根节点的序号，```左孩子结点：根节点为0 对应 2*index+1,根节点为1 对应 2*index+1``` 
+
+### 1113 Integer Set Partition (25分)
+* 
+
+### 1115 Counting Nodes in a BST (30分)
+* 题意：计算最低两层的结点数,
+
 
 ## 凉凉题目（看了题解也是毫无思路，反复看题解还是毫无思路）：
 ### 1049 Counting Ones (30分)
