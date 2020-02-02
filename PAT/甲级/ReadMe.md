@@ -579,17 +579,62 @@ sprintf(b, "%.2f",temp);///小数转字符串数组
 * 完全二叉树的层序遍历为什么左子树是```2*index```，而不是```2*index+1```?
   * 这取决于起始根节点的序号，```左孩子结点：根节点为0 对应 2*index+1,根节点为1 对应 2*index+1``` 
 
+### 1111 Online Map (30分)
+
+
 ### 1113 Integer Set Partition (25分)
-* 
+* 题意：N个正整数,你应该使划分|n1-n2|最小,|S1-S2|最大
+* 取最小的[n/2]个数,
+```
+int main() {
+	int n,halfsum=0,sum=0;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &a[i]);
+		sum += a[i];
+	}
+	sort(a, a + n);
+	for (int i = 0; i < n / 2; i++) {
+		halfsum += a[i];
+	}
+	printf("%d %d", n % 2, sum - 2 * halfsum);
+	return 0;
+}
+```
+
 
 ### 1115 Counting Nodes in a BST (30分)
 * 题意：计算最低两层的结点数,
 
+### 1118 Birds in Forest (25分)
+* 题意：记录树林中的树总数，和树林中的鸟数
+```
+for(int i=1;i<=maxn;i++){
+	if(exists[i]==true){
+		int Root=findFather(i);
+		cnt[Root]++;///记录该棵树的鸟数
+	   // printf("%d\n",Root);
+	}
+}
+
+int maxntree=0,maxbirds=0;///树的总数，最多鸟数
+for(int i=1;i<=maxn;i++){
+	if(exists[i]==true&&cnt[i]!=0){
+		maxntree++;
+		maxbirds+=cnt[i];
+	}
+}
+```
+
+### 1119 Pre- and Post-order Traversals (30分)
+
+### 
 
 ## 凉凉题目（看了题解也是毫无思路，反复看题解还是毫无思路）：
 ### 1049 Counting Ones (30分)
 * 
 
+### 1117 Eddington Number (25分)
 
 
 
