@@ -47,3 +47,6 @@ int main(){
 }
 
 ```
+* [题解1](https://blog.csdn.net/Mr_Zhangmc/article/details/81941836)
+* [题解2](https://blog.csdn.net/hjl_heart/article/details/104002447)
+
