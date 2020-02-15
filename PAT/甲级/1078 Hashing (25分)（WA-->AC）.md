@@ -1,6 +1,7 @@
 
 
 * ```测试点3 运行超时```
+* 加一个```break```就不超时了
 
 ```
 #include <bits/stdc++.h>
@@ -44,6 +45,7 @@ int main(){
                     table[a[i]]=tmpos;
                     vis[tmpos]=true;
                     flag=1;
+                    break;
                 }
             }
             if(flag==0)
@@ -108,6 +110,7 @@ int main(){
                     //table[a[i]]=tmpos;
                     vis[tmpos]=true;
                     flag=1;
+                    break;
                 }
             }
             //if(flag==0)
