@@ -122,3 +122,39 @@ int main(){
     return 0;
 }
 ```
+
+
+* [AC代码](https://blog.csdn.net/weixin_40116174/article/details/86755883)
+  * 也还不是很懂 
+```
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+int feature[20010] = {1,}, n;///feature是深度的意思
+char str[20010];
+
+void str2tree(){
+    int d_tree=1, d_binTree=1;
+    stack<int> mem({0});
+    for (int i = 1; str[i]; ++i) {
+        if (str[i] == 'd') {
+            mem.push(i);
+            if (str[i - 1] == 'd') feature[i] = feature[i - 1] + 1;
+            else feature[i] = feature[feature[i - 1]] + 1;
+            if (d_binTree < feature[i]) d_binTree = feature[i];
+            if (d_tree < mem.size()) d_tree = mem.size();///转换之前的树高
+        } else {
+            feature[i] = mem.top();
+            mem.pop();
+        }
+    }
+    printf("Tree %d: %d => %d\n", ++n, d_tree, d_binTree);
+}
+
+int main() {
+    while (scanf("%s", str), *str != '#') str2tree();
+}
+```
+
