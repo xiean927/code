@@ -1,0 +1,45 @@
+
+* 简单排序题
+
+```
+#include <bits/stdc++.h>
+
+using namespace std;
+
+struct Student{
+    double scr[15],maxscr,minscr;
+    double avgscr;
+}stu[10010];
+int n,k,m;
+
+bool cmp(const Student &a,const Student &b){
+    return a.avgscr>b.avgscr;
+}
+
+int main(){
+    scanf("%d%d%d",&n,&k,&m);
+    for(int i=0;i<n;i++){
+        double tmpmax=0,tmpmin=101;
+        for(int j=0;j<k;j++){
+            scanf("%lf",&stu[i].scr[j]);
+            tmpmax=max(tmpmax,stu[i].scr[j]);
+            tmpmin=min(tmpmin,stu[i].scr[j]);
+            stu[i].avgscr+=stu[i].scr[j];
+        }
+        stu[i].maxscr=tmpmax;
+        stu[i].minscr=tmpmin;
+    }
+    for(int i=0;i<n;i++){
+        stu[i].avgscr-=(stu[i].maxscr+stu[i].minscr);
+        stu[i].avgscr/=(k-2);
+    }
+    sort(stu,stu+n,cmp);
+
+    for(int i=m-1;i>=0;i--){
+        printf("%.3lf",stu[i].avgscr);
+        if(i>0)
+            printf(" ");
+    }
+    return 0;
+}
+```
