@@ -1,5 +1,6 @@
 
 ### 思路
+* [```long long int```变量](https://blog.csdn.net/CV_Jason/article/details/85244813)
 * 注意输出格式即可
 
 ```
