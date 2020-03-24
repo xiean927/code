@@ -52,7 +52,7 @@ int main() {
 }
 ```
 
-* [```dfs```](解法)
+* [```dfs解法```](https://blog.csdn.net/qq_38996065/article/details/99620300)
 
 ```
 #include <bits/stdc++.h>
