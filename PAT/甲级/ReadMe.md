@@ -10,3 +10,8 @@
 * https://blog.csdn.net/wchzh2015/article/details/102759736
 * https://blog.csdn.net/rhao999/article/details/104049577#comments
 * http://codeup.cn/problem.php?cid=100000602&pid=0
+* 八皇后问题
+  * https://blog.csdn.net/wchzh2015/article/details/102810936
+  * https://blog.csdn.net/weirdo_coder/article/details/89005706
+  
+  
