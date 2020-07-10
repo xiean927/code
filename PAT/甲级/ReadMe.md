@@ -4,3 +4,9 @@
 
 ### 1117 Eddington Number (25分)
 
+* http://codeup.cn/problem.php?cid=100000601&pid=0
+* http://codeup.cn/problem.php?cid=100000592&pid=1
+* http://codeup.cn/problem.php?cid=100000598&pid=0
+* https://blog.csdn.net/wchzh2015/article/details/102759736
+* https://blog.csdn.net/rhao999/article/details/104049577#comments
+* http://codeup.cn/problem.php?cid=100000602&pid=0
