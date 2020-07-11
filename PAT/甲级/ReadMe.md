@@ -15,3 +15,5 @@
   * https://blog.csdn.net/weirdo_coder/article/details/89005706
 * 向量组等价,https://www.baidu.com/baidu?tn=monline_7_dg&ie=utf-8&wd=%E5%90%91%E9%87%8F%E7%BB%84%E7%AD%89%E4%BB%B7%E5%92%8C%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%BB%A5%E5%8F%8A%E4%BA%92%E7%9B%B8%E8%A1%A8%E7%A4%BA  
 
+* ch06-6.7 队列的应用得看看
+
