@@ -1,5 +1,8 @@
 
 
+### 1078 Hashing (25分)
+#### 题目大意：给出散列表长和要插入的元素，将这些元素按照读入的顺序插入散列表中，其中散列函数为h(key) = key % TSize，解决冲突采用只向正向增加的二次方探查法。如果题中给出的TSize不是素数，就取第一个比TSize大的素数作为TSize
+
 * ```测试点3 运行超时```
 * 加一个```break```就不超时了
 
@@ -10,7 +13,7 @@ using namespace std;
 
 bool is_prime(int n){
     if(n<=1)    return false;
-    int sqr=(int)sqrt(n);
+    int sqr=(int)sqrt(n*1.0);
     for(int i=2;i<=sqr;i++){
         if(n%i==0)
             return false;
@@ -45,7 +48,7 @@ int main(){
                     table[a[i]]=tmpos;
                     vis[tmpos]=true;
                     flag=1;
-                    break;
+                    break;///必加
                 }
             }
             if(flag==0)
@@ -110,7 +113,7 @@ int main(){
                     //table[a[i]]=tmpos;
                     vis[tmpos]=true;
                     flag=1;
-                    break;
+                    break;///必加
                 }
             }
             //if(flag==0)
