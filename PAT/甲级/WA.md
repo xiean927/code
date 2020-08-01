@@ -138,7 +138,8 @@ int main(){
 ### ``` 1118 Birds in Forest (25分)```
 * 为什么```union_()```函数无需做特殊处理即可合并根？？？
 
-
+### ```1119 Pre- and Post-order Traversals (30分)```
+* [图解](https://blog.csdn.net/li1615882553/article/details/88061615)
 
 * ```1130 Infix Expression (25分)```与2019年秋季```7-3 Postfix Expression```，不知道在哪里加括号，应该再做一遍2019年秋季（第一题，深度遍历也不会）
 
