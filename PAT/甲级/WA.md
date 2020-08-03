@@ -143,6 +143,79 @@ int main(){
 
 * ```1130 Infix Expression (25分)```与2019年秋季```7-3 Postfix Expression```，不知道在哪里加括号，应该再做一遍2019年秋季（第一题，深度遍历也不会）
 
+### 1127 ZigZagging on a Tree (30分)
+#### 题意
+* 给出树的中序遍历和后序遍历
+#### 输出
+* 打印树的```zigzagging```序列
+#### 思路
+
+* 静态结点的建树代码
+  * 为什么输入是1~n???
+    * 因为在层序遍历时，默认情况下```tree[temp.index][0] != 0```序号等于0，代表孩子结点为空，
+    * 如果输入时0~n-1，则最终输出时，会遗漏下标0的元素
+```
+int tree[35][2];
+void create(int &index,int inL,int inR,int postL,int postR){
+    if(inL>inR)
+        return ;
+    index=postR;
+    int k=0;
+    while(in[k]!=post[postR])
+        k++;
+    int numLeft=k-inL;
+    create(tree[index][0],inL,k-1,postL,postL+numLeft-1);
+    create(tree[index][1],k+1,inR,postL+numLeft,postR-1);
+}
+
+int main(){
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+        scanf("%d",&in[i]);
+    for(int i=1;i<=n;i++)
+        scanf("%d",&post[i]);
+    create(root,1,n,1,n);
+```
+
+* 层序遍历（记录层号）
+  * 为什么是记录后序遍历的结点值？？？
+```
+struct node {
+	int index, depth;
+};
+
+void bfs() {
+	queue<node> q;
+	q.push(node{ root,0 });
+	while (!q.empty()) {
+		node temp = q.front();
+		q.pop();
+		result[temp.depth].push_back(post[temp.index]);
+		if (tree[temp.index][0] != 0)
+			q.push(node{ tree[temp.index][0],temp.depth + 1 });
+		if (tree[temp.index][1] != 0)
+			q.push(node{ tree[temp.index][1],temp.depth + 1 });
+	}
+}
+```
+
+* 输出
+```
+printf("%d", result[0][0]);
+for (int i = 1; i < 35; i++) {
+	if (i % 2 == 1) {//奇数层
+		for (int j = 0; j < result[i].size(); j++)
+			printf(" %d", result[i][j]);
+	}
+	else {
+		for (int j = result[i].size() - 1; j >= 0; j--)
+			printf(" %d", result[i][j]);
+	}
+}
+```
+
+
+
 ## 凉凉题目（看了题解也是毫无思路，反复看题解还是毫无思路）：
 ### 1049 Counting Ones (30分)
 * 
