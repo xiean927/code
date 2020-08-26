@@ -14,3 +14,8 @@
 
 ## 图
 * [1122 哈密顿环](https://blog.csdn.net/galesaur_wcy/article/details/81544581)
+
+
+## [甲级专业题解](https://blog.csdn.net/allisonshing/category_9337190.html)
+## [pat考试大纲](https://blog.csdn.net/a656418zz/article/details/83794944)
+
