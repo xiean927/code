@@ -5,51 +5,58 @@
 #### 中序遍历，除了根节点和叶节点之外的其他结点，要加括号
 #### [思路，转自CSDN](https://blog.csdn.net/galesaur_wcy/article/details/82354161)
 ```
-#include<iostream>
-#include<cstdio>
-#include<cstring>
-#include<algorithm>
-#include<vector>
-#include<map>
-#include<queue>
+#include <bits/stdc++.h>
+
 using namespace std;
-struct node
-{
+
+struct node{
 	char data[15];
 	int left,right;
 }tree[25];
-int view[25],root;
-void InOrder(int v)
-{
-    if(v != -1){
-        if(v != root && (tree[v].left != -1 || tree[v].right != -1))
-			printf("(");
-        InOrder(tree[v].left);
-        printf("%s ",tree[v].data);
-        InOrder(tree[v].right);
-        if(v != root && (tree[v].left != -1 || tree[v].right != -1))
-		 	printf(")");
+
+int vis[25],root;
+int n;
+
+void inorder(int index){
+    if(index==-1)
+        return ;
+    //printf("(");
+    if(index!=root&&(tree[index].left!=-1||tree[index].right!=-1))
+        printf("(");
+
+    if(tree[index].left!=-1&&tree[index].right!=-1){
+        inorder(tree[index].left);
+        printf("%s",tree[index].data);
+        inorder(tree[index].right);
     }
+    else if(tree[index].left==-1&&tree[index].right!=-1){
+        printf("%s",tree[index].data);
+        inorder(tree[index].right);
+    }
+    else if(tree[index].left==-1&&tree[index].right==-1)
+        printf("%s",tree[index].data);
+    //printf(")");
+    if(index!=root&&(tree[index].left!=-1||tree[index].right!=-1))
+        printf(")");
 }
-int main()
-{
-	int n ;
+
+
+int main(){
 	scanf("%d",&n);
-	for(int i = 1; i <= n; i++)
-	{
-		scanf("%s %d %d",tree[i].data,&tree[i].left, &tree[i].right);
-		view[tree[i].left] = 1;
-		view[tree[i].right] = 1;
+	for(int i=1;i<=n;i++){
+		scanf("%s %d %d",tree[i].data,&tree[i].left,&tree[i].right);
+		vis[tree[i].left]=1;
+		vis[tree[i].right]=1;
 	}
-	for(int i = 1; i <= n; i++)
-	{
-		if(view[i] == 0)
-		{
-			root = i ;
+
+	for(int i=1;i<=n;i++)
+		if(vis[i]==0){
+			root=i;
 			break;
 		}
-	}
-	InOrder(root);
+
+	inorder(root);
+
 	return 0;
 }
 
