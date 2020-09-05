@@ -21,9 +21,6 @@ if(nd.x==ed.x&&nd.y==ed.y){
 
 using namespace std;
 
-struct Node{
-    int x,y,step;
-}st,ed;
 
 int dix[4]={1,-1,0,0};///四个方向
 int diy[4]={0,0,1,-1};
@@ -31,9 +28,12 @@ char mp[310][310];
 int m,n;///m:行;n:列
 bool vis[310][310];
 
+struct Node{
+    int x,y,step;
+}st,ed;
+
 //优先队列的排列方式
-bool operator < (Node a, Node b)
-{
+bool operator<(const Node a,const Node b){
     return a.step > b.step;
 }
 
@@ -48,7 +48,6 @@ void bfs(){
             ed.step=nd.step;
             break;
         }
-
 
         for(int i=0;i<4;i++){
             int dx=nd.x+dix[i];
@@ -98,11 +97,13 @@ int main(){
         memset(vis,false,sizeof(vis));
         bfs();
         //for(int )
-        cout<<ed.step<<endl;
+        printf("%d\n",ed.step);
     }
 
     return 0;
 }
+
+
 
 
 ```
