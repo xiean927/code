@@ -1,0 +1,105 @@
+*** 10分dfs代码：
+
+```
+
+int n,m;
+const int MAXN = 1005;
+vector<int> v[MAXN];
+bool visit[MAXN];
+int G[MAXN][MAXN];
+int start;
+int number=0;
+void dfs(int s){
+	G[start][s]=1;
+	for(int i=0;i<v[s].size();i++){
+		if(visit[v[s][i]]==false){
+			visit[v[s][i]]=true;
+			dfs(v[s][i]);
+			visit[v[s][i]]=false;
+		}
+	}
+}
+int main(){
+	scanf("%d %d",&n,&m);
+	int a,b;
+	for(int i=0;i<m;i++){
+		scanf("%d %d",&a,&b);
+		v[a].push_back(b);
+	}
+	for(int i=1;i<=n;i++){
+		visit[i]=true;
+		start=i;
+		dfs(i);
+		for(int j=1;j<=n;j++)
+			visit[j]=false;
+	}
+	for(int i=1;i<=n;i++){
+		for(int j=i+1;j<=n;j++){
+			if(G[i][j]==1&&G[j][i]==1)
+			number++;
+		}
+	}
+	printf("%d",number);
+	return 0;
+}
+
+
+```
+
+
+*** 60分bfs代码：
+
+```
+
+int n,m;
+const int MAXN = 1005;
+vector<int> v[MAXN];
+bool visit[MAXN];
+int G[MAXN][MAXN];
+int number; 
+int ans;
+queue<int> q;
+void bfs(int start){
+	while(!q.empty())
+	q.pop();
+	q.push(start);
+	while(!q.empty()){
+		int f=q.front();
+		q.pop();
+		for(int i=0;i<v[f].size();i++){
+			if(visit[v[f][i]]==false){
+				visit[v[f][i]]=true;
+				q.push(v[f][i]);
+				G[start][v[f][i]]=1; 
+			}
+		}
+	}
+
+}
+int main(){
+	scanf("%d %d",&n,&m);
+	int a,b;
+	for(int i=0;i<m;i++){
+		scanf("%d %d",&a,&b);
+		v[a].push_back(b);
+	}
+	for(int i=1;i<=n;i++){
+		G[i][i]=1;
+		bfs(i);
+        memset(visit,false,sizeof(visit));
+	}
+	for(int i=1;i<=n;i++){
+		for(int j=i+1;j<=n;j++){
+			if(G[i][j]==1&&G[j][i]==1)
+			ans++;
+		}
+	}
+	printf("%d",ans);
+	return 0;
+}
+
+
+```
+
+
+
