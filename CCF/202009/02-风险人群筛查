@@ -1,0 +1,39 @@
+
+
+
+
+
+```
+```
+int main() {
+  int n,k,t,x1,y1,x2,y2;
+  scanf("%d%d%d",&n,&k,&t,&x1,&y1,&x2,&y2);
+  int x,y;
+  int s1=0,s2=0;
+  int p=0;
+  int flag=0;
+  int f=0;
+  for(int i=0;i<n;i++){
+    p=0;
+    flag=0;
+    f=0;
+    for(int j=0;j<t;j++){
+      scanf("%d%d",&x,&y);
+      if(x>=x1&&x<=x2&&y>=y1&&y<=y2){
+        p++;
+        f=1;
+        if(p>=k)
+          flag=1;
+      }
+      else
+      p=0;
+    }
+    if(f)	s1++;
+    if(flag)	s2++;
+  }
+  printf("%d\n%d\n",s1,s2);
+  return 0;
+}
+
+```
+```
