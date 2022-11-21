@@ -22,12 +22,14 @@ D:\Anaconda3\python.exe
 
 >>>pip freeze
 也可以显示已下载的库
-类似于下面：
+输出类似于下面：
 absl-py==1.0.0
 alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 anaconda-client @ file:///C:/ci/anaconda-client_1635342725944/work
 anaconda-navigator==2.1.1
 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1626085644852/work
+...
+
 
 查看过时的库
 >>>pip list --outdated
