@@ -1,4 +1,8 @@
 
+[如何打开mysql数据库？](https://blog.csdn.net/seanyang_/article/details/122221488)
+
+[启动MySQL服务的两种方式（图解）](http://c.biancheng.net/view/7142.html)
+
 [Python如何连接数据库，一文看懂](https://blog.csdn.net/laozhu_Python/article/details/107560672)
 
 
