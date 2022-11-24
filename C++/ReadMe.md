@@ -7,4 +7,60 @@ string str="123.0123";
 float f=atof(str.c_str());
 cout<<f;
 ```
+* [c语言中[Error] variable or field 'CreatList' declared void错误原因分析](https://blog.csdn.net/the_little_fairy___/article/details/73238049)
+* [vector 多次删除第一个元素](https://www.cnblogs.com/robin2ML/p/7719002.html)
+```
+voidPrintInt(const int&nData)
+{
+    cout<<nData<<endl;
+}
+int main()
+{
+    vector<int> vecInt;
+    for(int i=0; i<10;++i)
+    {
+       vecInt.push_back(i);
+    }
+    cout<<"向量中的内容为："<<endl;
+    //for_each(vecInt.begin(),vecInt.end(),PrintInt);
+    for(vector<int>::iterator iter = vecInt.begin(); iter != vecInt.end(); ++iter) {
+        cout << *iter << " ";
+    }
+    cout << "\n";
+    cout<<"vector contains "<<vecInt.size()<<" elements"<<endl;
+    vecInt.pop_back();//删除最后一个元素
+    cout<<"删除最后一个元素后，vector contains "<<vecInt.size()<<" elements"<<endl;
+     
+    vector<int>::iterator k = vecInt.begin();
+    vecInt.erase(k);//删除第一个元素
+     
+    for(vector<int>::iterator iter = vecInt.begin(); iter != vecInt.end(); ++iter) {
+        cout << *iter << " ";
+    }
+    cout << "\n";
+     
+    //vecInt.erase(k); //迭代器k已经失效，会出错
+    cout<<"删除第一个元素后，vector contains "<<vecInt.size()<<" elements"<<endl;
+    k = vecInt.begin();
+    vecInt.erase(k);
+     
+    for(vector<int>::iterator iter = vecInt.begin(); iter != vecInt.end(); ++iter) {
+        cout << *iter << " ";
+    }
+    cout << "\n";
+     
+    cout<<"删除第一个元素后，vector contains "<<vecInt.size()<<" elements"<<endl;
+    //vecInt.erase(vecInt.begin(),vecInt.end()); //删除所有元素
+    //cout<<"删除所有元素后，vector contains "<<vecInt.size()<<"elements"<<endl; //输出为0
+    vector<int>::iterator vecNewEnd =remove(vecInt.begin(),vecInt.end(),5); //删除元素
+    cout<<"删除元素后，vector contains "<<vecInt.size()<<" elements"<<endl;
+    cout<<"向量开始到新结束为止的元素："<<endl;
+    //for_each(vecInt.begin(),vecNewEnd,PrintInt);
+    cout<<"向量中的元素："<<endl;
+    //for_each(vecInt.begin(),vecInt.end(),PrintInt);
+  
+    return 0;
+}
+
+```
 
