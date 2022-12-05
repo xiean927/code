@@ -34,6 +34,21 @@ anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1626085644852/wor
 查看过时的库
 >>>pip list --outdated
 
-
 ```
+
+### 相似度计算方法
+
+* [关于相似度计算方法的python实现](https://blog.csdn.net/qq_33934427/article/details/123424166?spm=1001.2101.3001.6650.15&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-15-123424166-blog-124100957.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-15-123424166-blog-124100957.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=20)
+* [各种相似度计算的python实现](https://blog.csdn.net/a2099948768/article/details/82218478?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-82218478-blog-124100957.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-82218478-blog-124100957.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=2)
+
+
+
+
+
+
+
+
+
+
+
 
