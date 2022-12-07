@@ -21,3 +21,5 @@ A = B.^(1/n);
 ```
  matlab根号表示有三种：sqrt(x)；sqrtm(x)；x^0.5
 ```
+* [输入和输出](https://blog.csdn.net/m0_53022813/article/details/124487219)
+
