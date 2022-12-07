@@ -7,7 +7,7 @@ str1.lower()
 str1.upper()
 ```
 * [python如何读取txt文件内容](https://m.php.cn/article/479676.html)
-
+* [总结几个Python中常见的遍历字典的方法](https://blog.csdn.net/yaoyuanna/article/details/126009259)
 
 ## `import库`
 ### pathlib — Object-oriented filesystem paths
