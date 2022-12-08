@@ -20,3 +20,6 @@ str1.upper()
 ### `哈夫曼树`
 * [Python实现哈夫曼编码（Huffman code）(不怎么用)](https://blog.csdn.net/qq_42932667/article/details/121952585)
 
+## 可视化
+### 
+* [使用python绘制二叉树（matplotlib + networkx）](https://blog.csdn.net/weixin_50425288/article/details/124019369)
