@@ -43,7 +43,7 @@ anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1626085644852/wor
 
 
 
-### 
+### 输入、输出、登录
 * [简易用户登录系统【Python】](https://blog.csdn.net/weixin_64811333/article/details/126295552)
 ```
 LoginSystem.py
@@ -53,7 +53,7 @@ from User import *
 
 ```
 
-
+* [输入input](https://blog.csdn.net/qq_60899598/article/details/123829768)
 
 
 
