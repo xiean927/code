@@ -7,6 +7,7 @@ str1.lower()
 str1.upper()
 ```
 * [python如何读取txt文件内容](https://m.php.cn/article/479676.html)
+* [python将数据写入txt](https://blog.csdn.net/HoyAnGx/article/details/124835576)
 * [总结几个Python中常见的遍历字典的方法](https://blog.csdn.net/yaoyuanna/article/details/126009259)
 * [用python将数据写入Excel文件中](https://blog.csdn.net/weixin_44322716/article/details/127790436)
 
@@ -22,6 +23,7 @@ pow(x, y[, z])
 注意：pow() 通过内置的方法直接调用，内置方法会把参数作为整型，而 math 模块则会把参数转换为 float。
 
 ```
+
 
 
 * [python 判断字符是否是字母](https://blog.csdn.net/weixin_46507345/article/details/123406895)
