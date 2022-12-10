@@ -17,13 +17,17 @@ import math
 math.pow( x, y )
 
 内置的 pow() 方法
-
 pow(x, y[, z])
-
 函数是计算x的y次方，如果z在存在，则再对结果进行取模，其结果等效于pow(x,y) %z
 注意：pow() 通过内置的方法直接调用，内置方法会把参数作为整型，而 math 模块则会把参数转换为 float。
 
 ```
+
+
+* [python 判断字符是否是字母](https://blog.csdn.net/weixin_46507345/article/details/123406895)
+* [Python中交换字典键值对的方法](https://blog.csdn.net/weixin_46707326/article/details/117387329)
+* [python将整数转换成二进制形式的方法](https://blog.csdn.net/ACBC12345/article/details/124441879)
+
 
 ### pathlib — Object-oriented filesystem paths
 * [pathlib — Object-oriented filesystem paths](https://docs.python.org/3/library/pathlib.html)
