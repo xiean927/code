@@ -11,9 +11,25 @@ str1.upper()
 * [用python将数据写入Excel文件中](https://blog.csdn.net/weixin_44322716/article/details/127790436)
 
 ## `import库`
+* Python中的n次方用pow()方法来表示，pow()方法返回 xy（x的y次方）的值。
+```
+import math
+math.pow( x, y )
+
+内置的 pow() 方法
+
+pow(x, y[, z])
+
+函数是计算x的y次方，如果z在存在，则再对结果进行取模，其结果等效于pow(x,y) %z
+注意：pow() 通过内置的方法直接调用，内置方法会把参数作为整型，而 math 模块则会把参数转换为 float。
+
+```
+
 ### pathlib — Object-oriented filesystem paths
 * [pathlib — Object-oriented filesystem paths](https://docs.python.org/3/library/pathlib.html)
 * [pathlib --- 面向对象的文件系统路径](https://docs.python.org/zh-cn/3/library/pathlib.html#)
+
+
 
 
 ## 算法
