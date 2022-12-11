@@ -66,4 +66,4 @@ int main()
 
 
 * [Code::Blocks今天突然乱码(中文) 报错 error:converting to execution character set:Illegal byte sequence](https://blog.csdn.net/qq_52722885/article/details/122196979?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-122196979-blog-124531566.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-122196979-blog-124531566.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=1)
-
+* [codeblosk中文注释乱码和一些头文件的不能使用的问题解决方法(error: failure to convert GBK to UTF-8|)](https://blog.csdn.net/weixin_44070289/article/details/107193203)
