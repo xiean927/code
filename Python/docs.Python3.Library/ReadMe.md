@@ -41,6 +41,8 @@ pow(x, y[, z])
 ## 算法
 ### `哈夫曼树`
 * [Python实现哈夫曼编码（Huffman code）(不怎么用)](https://blog.csdn.net/qq_42932667/article/details/121952585)
+* [Python 代码实现哈夫曼编码](https://blog.csdn.net/amnesia_h/article/details/123671999)
+
 
 ## 可视化
 ### 绘制二叉树 Python
