@@ -55,7 +55,9 @@ from User import *
 
 * [输入input](https://blog.csdn.net/qq_60899598/article/details/123829768)
 
-
 * [UnicodeDecodeError: ‘utf-8‘ codec can‘t decode byte 0xc0 in position 0: invalid start byte报错解决](https://blog.csdn.net/Deng872347348/article/details/126308403)
+* [python读取csv文件的几种方式（含实例说明）](https://blog.csdn.net/qq_43160348/article/details/124331781)
+
+
 
 
