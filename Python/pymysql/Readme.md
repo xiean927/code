@@ -1,9 +1,13 @@
 
-[如何打开mysql数据库？](https://blog.csdn.net/seanyang_/article/details/122221488)
+* [如何打开mysql数据库？](https://blog.csdn.net/seanyang_/article/details/122221488)
 
-[启动MySQL服务的两种方式（图解）](http://c.biancheng.net/view/7142.html)
+* [启动MySQL服务的两种方式（图解）](http://c.biancheng.net/view/7142.html)
 
-[Python如何连接数据库，一文看懂](https://blog.csdn.net/laozhu_Python/article/details/107560672)
+* [Python如何连接数据库，一文看懂](https://blog.csdn.net/laozhu_Python/article/details/107560672)
+
+### Python连接数据库
+* [第一个，实例](https://blog.csdn.net/laozhu_Python/article/details/107560672)
+* [第二个](https://www.cnblogs.com/xdsa/p/16000833.html)
 
 
 ### 查询语句返回结果是多行的，如何实现
