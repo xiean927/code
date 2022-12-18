@@ -11,6 +11,40 @@ str1.upper()
 * [总结几个Python中常见的遍历字典的方法](https://blog.csdn.net/yaoyuanna/article/details/126009259)
 * [用python将数据写入Excel文件中](https://blog.csdn.net/weixin_44322716/article/details/127790436)
 
+* `查找find函数`
+```
+语法：S.find(sub[, start[, end]]) -> int
+参数
+    str：要查找的字符串。
+    start：可选参数，开始索引，默认为0。
+    end：可选参数，结束索引，默认为字符串长度。
+返回值
+    如果包含子字符串返回开始的索引值，否则返回-1。
+示例
+str = '我爱我的爸妈'
+print('返回子字符串开始的偏移量：', str.find('我的'))
+print('指定开始索引：', str.find('我的', 3))
+print('指定结束索引：', str.find('我的', 0, 2))
+print('没有找到的情况下返回-1：', str.find('姐姐'))
+
+Out:
+返回子字符串开始的偏移量： 2
+指定开始索引： -1
+指定结束索引： -1
+没有找到的情况下返回-1： -1
+
+help(str.find)
+find(...) method of builtins.str instance
+    S.find(sub[, start[, end]]) -> int
+    
+    Return the lowest index in S where substring sub is found,
+    such that sub is contained within S[start:end].  Optional
+    arguments start and end are interpreted as in slice notation.
+    
+    Return -1 on failure.
+```
+
+
 ## `import库`
 * Python中的n次方用pow()方法来表示，pow()方法返回 xy（x的y次方）的值。
 ```
