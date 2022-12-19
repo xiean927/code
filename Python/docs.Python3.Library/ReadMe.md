@@ -64,13 +64,19 @@ pow(x, y[, z])
 * [Python中交换字典键值对的方法](https://blog.csdn.net/weixin_46707326/article/details/117387329)
 * [python将整数转换成二进制形式的方法](https://blog.csdn.net/ACBC12345/article/details/124441879)
 
+### pdf处理
+* [Python实现PDF复制自动去除换行及空格](https://blog.csdn.net/m0_59426411/article/details/122808275)
+
+
 
 ### pathlib — Object-oriented filesystem paths
 * [pathlib — Object-oriented filesystem paths](https://docs.python.org/3/library/pathlib.html)
 * [pathlib --- 面向对象的文件系统路径](https://docs.python.org/zh-cn/3/library/pathlib.html#)
 
-
-
+### glob模块
+* [glob库中主要的3个函数：glob()函数、iglob()函数、escape()函数](https://blog.csdn.net/weixin_41261833/article/details/108069945)
+* [python复制、移动文件到指定文件夹](https://blog.csdn.net/longshaonihaoa/article/details/105679517?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-105679517-blog-124631123.pc_relevant_3mothn_strategy_recovery&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
+* []()
 
 ## 算法
 ### `哈夫曼树`
