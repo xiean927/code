@@ -58,9 +58,6 @@ pow(x, y[, z])
 
 ```
 
-### 爬虫
-* [python爬取论文](https://www.cnblogs.com/znjy/p/14884125.html)
-
 
 * [python 判断字符是否是字母](https://blog.csdn.net/weixin_46507345/article/details/123406895)
 * [Python中交换字典键值对的方法](https://blog.csdn.net/weixin_46707326/article/details/117387329)
@@ -98,6 +95,8 @@ pow(x, y[, z])
 * 标准差是方差的算术平方根。标准差能反映一个数据集的离散程度。平均数相同的两组数据，标准差未必相同。
 
 
+## 爬虫
+* [python爬取论文](https://www.cnblogs.com/znjy/p/14884125.html)
 
 
 
