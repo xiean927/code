@@ -1,40 +1,3 @@
-### 如何查看Python 安装位置以及已经安装的库
-
-```
-法一
-import sys
-sys.path
-
-```
-
-```
-法二
->>>where python
-
-Output:
-D:\Anaconda3\python.exe
-
-进入
->>>cd D:\Anaconda3
-
-可以显示下载的库
->>>pip list
-
->>>pip freeze
-也可以显示已下载的库
-输出类似于下面：
-absl-py==1.0.0
-alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
-anaconda-client @ file:///C:/ci/anaconda-client_1635342725944/work
-anaconda-navigator==2.1.1
-anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1626085644852/work
-...
-
-
-查看过时的库
->>>pip list --outdated
-
-```
 
 ### 相似度计算方法
 
@@ -50,7 +13,6 @@ LoginSystem.py
 应该是
 from User import *
 
-
 ```
 
 * [输入input](https://blog.csdn.net/qq_60899598/article/details/123829768)
@@ -60,5 +22,13 @@ from User import *
 
 ### 字典
 * [python中字典的复制](https://blog.csdn.net/qq_26476413/article/details/123059352)
+
+
+### shp格式文件
+* [shp格式文件简介](https://blog.csdn.net/qq_40206371/article/details/122505234)
+* [python读取shp文件](https://blog.csdn.net/weixin_42372313/article/details/113728014?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-4-113728014-blog-122505234.pc_relevant_3mothn_strategy_recovery&spm=1001.2101.3001.4242.3&utm_relevant_index=7)
+
+
+
 
 
