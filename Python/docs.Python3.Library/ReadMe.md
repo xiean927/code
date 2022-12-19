@@ -58,6 +58,8 @@ pow(x, y[, z])
 
 ```
 
+### 爬虫
+* [python爬取论文](https://www.cnblogs.com/znjy/p/14884125.html)
 
 
 * [python 判断字符是否是字母](https://blog.csdn.net/weixin_46507345/article/details/123406895)
@@ -87,6 +89,7 @@ pow(x, y[, z])
 ## 可视化
 ### 绘制二叉树 Python
 * [使用python绘制二叉树（matplotlib + networkx）](https://blog.csdn.net/weixin_50425288/article/details/124019369)
+
 
 ## 概率论
 * [实现随机正态分布数据，并导出到表格](https://blog.csdn.net/m0_53533553/article/details/127639771)
