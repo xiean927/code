@@ -66,7 +66,7 @@ pow(x, y[, z])
 
 ### pdf处理
 * [Python实现PDF复制自动去除换行及空格](https://blog.csdn.net/m0_59426411/article/details/122808275)
-
+* [pdfminer.pdfparser 用python从PDF格式论文中读取其中的参考文献](https://www.jianshu.com/p/bee9b09abaf5)
 
 
 ### pathlib — Object-oriented filesystem paths
