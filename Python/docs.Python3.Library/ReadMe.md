@@ -10,6 +10,7 @@ str1.upper()
 * [python将数据写入txt](https://blog.csdn.net/HoyAnGx/article/details/124835576)
 * [总结几个Python中常见的遍历字典的方法](https://blog.csdn.net/yaoyuanna/article/details/126009259)
 * [用python将数据写入Excel文件中](https://blog.csdn.net/weixin_44322716/article/details/127790436)
+* [使用python将字符串颠倒顺序](https://blog.csdn.net/qq_39293334/article/details/126375616)
 
 * `查找find函数`
 ```
