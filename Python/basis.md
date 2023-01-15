@@ -1,5 +1,5 @@
 
-#### 'map'
+#### `map`
 ##### 题目1：输入三个整数，输出最大值
 * 输入三个整数，输出最大值，可以用以下语句输入3个整数：
 ```
@@ -30,7 +30,7 @@ Output:
 
 * [Python的map、reduce函数](https://zhuanlan.zhihu.com/p/77311224)
 
-#### 'reduce函数'
+#### `reduce函数`
 
 ```
 求10的阶乘，就可以用reduce做：
@@ -47,10 +47,21 @@ result = reduce(f,items)
 print(result)
 ```
 
+#### 函数
 
+```
+def add(x, y) -> int:
+  return x+y
+  
+def add(x:int, y:int) ->bool:
+    if(x>y):
+        return True
+    else:
+        return False
 
-
-
+```
+* `->` 常常出现在python函数定义的函数名后面，为函数添加元数据，描述函数返回的数据类型。
+* 优点 可以强制规定返回数据的类型，同时还可以设定返回类型为None，也就是不返回任何东西。利于后期查看掌握函数的返回类型。
 
 
 
