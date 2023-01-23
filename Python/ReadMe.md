@@ -12,21 +12,15 @@
 LoginSystem.py
 应该是
 from User import *
-
 ```
 
 * [输入input](https://blog.csdn.net/qq_60899598/article/details/123829768)
-
 * [UnicodeDecodeError: ‘utf-8‘ codec can‘t decode byte 0xc0 in position 0: invalid start byte报错解决](https://blog.csdn.net/Deng872347348/article/details/126308403)
 * [python读取csv文件的几种方式（含实例说明）](https://blog.csdn.net/qq_43160348/article/details/124331781)
 
 ### 字典
 * [python中字典的复制](https://blog.csdn.net/qq_26476413/article/details/123059352)
 
-
-### shp格式文件
-* [shp格式文件简介](https://blog.csdn.net/qq_40206371/article/details/122505234)
-* [python读取shp文件](https://blog.csdn.net/weixin_42372313/article/details/113728014?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-4-113728014-blog-122505234.pc_relevant_3mothn_strategy_recovery&spm=1001.2101.3001.4242.3&utm_relevant_index=7)
 
 
 
