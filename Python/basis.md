@@ -69,6 +69,7 @@ def add(x:int, y:int) ->bool:
 
 * [Python:Optional和带默认值的参数](https://blog.csdn.net/qq_44683653/article/details/108990873)
 
-
+### 列表
+* [python列表常见排序方法](https://blog.csdn.net/m0_69265664/article/details/125703164)
 
 
