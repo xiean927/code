@@ -7,3 +7,5 @@ df_sub=df[df.column==2]
 # column是需要限定条件列的名称，“==”后可限制任意值。
 # df_sub即为所有满足column=1的数据组成的新DataFrame。
 ```
+* [DataFrame求某列数据的均值，方差等统计数](https://blog.csdn.net/qq_53817374/article/details/123387027)
+
