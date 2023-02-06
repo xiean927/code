@@ -1,6 +1,21 @@
+
+#### 读取`csv`、`excel`
 * [python读取csv文件的几种方式（含实例说明）](https://blog.csdn.net/qq_43160348/article/details/124331781)
 * [用Pandas读取CSV](https://blog.csdn.net/sirobot/article/details/126177390)
+* [未看 50_Pandas读取 Excel 文件 (xlsx, xls)](https://blog.csdn.net/qq_18351157/article/details/124865696)
+* 
+
+#### 数据类型`DataFrame`
 * [Pandas DataFrame入门教程（图解版）](http://c.biancheng.net/pandas/dataframe.html)
+* [读取DataFrame的某行或某列](https://blog.csdn.net/weixin_44709340/article/details/122538469)
+```
+import pandas as pd
+dict=[[1,2,3,4,5,6],[2,3,4,5,6,7],[3,4,5,6,7,8],[4,5,6,7,8,9],[5,6,7,8,9,10]]
+data=pd.DataFrame(dict)
+print(data)
+for indexs in data.index:
+    print(data.loc[indexs].values, data.loc[indexs].values[0], data.loc[indexs].values[1])
+```
 * [Python中Dataframe数据的排序（含实例讲解）](https://blog.csdn.net/wzk4869/article/details/126370595)
 * [Python 取dataframe某一列为特定值](https://blog.csdn.net/weixin_42788078/article/details/109294575)
 ```
